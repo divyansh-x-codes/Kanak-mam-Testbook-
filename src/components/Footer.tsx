@@ -82,13 +82,13 @@ const Footer = () => {
           className="text-center space-y-3"
         >
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-            Made with{" "}
+            Made with{""}
             <Heart className="w-4 h-4 text-pink-400 animate-pulse" />{" "}
             for aspiring teachers
           </p>
 
           <p className="text-xs text-muted-foreground/60">
-            © 2024 Science by KanakSom · All content is free forever
+            © 2025 Science by KanakSom · All content is free forever
           </p>
         </motion.div>
       </div>
