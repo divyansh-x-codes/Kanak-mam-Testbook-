@@ -3,6 +3,8 @@ import { Atom, Beaker, Leaf, BookOpen } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import SubjectCard from "./SubjectCard";
 
+const LOCKED = true; // 🔒 master switch
+
 const subjects = [
   {
     title: "Physics",
@@ -42,12 +44,15 @@ const CTETDashboard = () => {
   const navigate = useNavigate();
 
   const handleSubjectClick = (subject: string) => {
+    if (LOCKED) return; // ❌ no navigation
+
     const routes: Record<string, string> = {
       Physics: "/physics",
       Chemistry: "/chemistry",
       Biology: "/biology",
       "Science Pedagogy": "/pedagogy",
     };
+
     navigate(routes[subject] || "/");
   };
 
@@ -60,7 +65,7 @@ const CTETDashboard = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Section Header */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,21 +76,24 @@ const CTETDashboard = () => {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             CTET Paper II (Class 6-8)
           </span>
+
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Choose Your <span className="gradient-text">Subject</span>
           </h2>
+
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Complete chapter-wise study material with free downloadable PDFs in Hindi & English
           </p>
         </motion.div>
 
-        {/* Subject Cards Grid */}
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {subjects.map((subject, index) => (
             <SubjectCard
               key={subject.title}
               {...subject}
               index={index}
+              locked={LOCKED}          // 🔒 pass lock state
               onClick={() => handleSubjectClick(subject.title)}
             />
           ))}
