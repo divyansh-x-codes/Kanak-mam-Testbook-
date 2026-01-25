@@ -11,10 +11,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Science by KanakSom - Free CTET Science Preparation</title>
+        <title>Science by KanakSom -CTET Science Preparation</title>
         <meta
           name="description"
-          content="Free CTET Science preparation platform by Kanak Som. Complete chapter-wise study material for Physics, Chemistry, Biology, and Science Pedagogy with downloadable PDFs."
+          content=" CTET Science preparation platform by Kanak Som. Complete chapter-wise study material for Physics, Chemistry, Biology, and Science Pedagogy with downloadable PDFs."
         />
         <meta
           name="keywords"
@@ -45,7 +45,7 @@ const Index = () => {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "INR",
-              "description": "Free CTET Science study materials"
+              "description": " CTET Science study materials"
             }
           })}
         </script>
