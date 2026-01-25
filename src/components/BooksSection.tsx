@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { CheckCircle, Download, Eye, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const DOWNLOAD_URL =
-  "https://drive.google.com/uc?export=download&id=1t9Ms4N5oYoFRCZSs2RhiG617YiA7bHVR";
+const Pay@249 =
+  "";
 
 const PREVIEW_URL =
-  "https://drive.google.com/file/d/1t9Ms4N5oYoFRCZSs2RhiG617YiA7bHVR/preview";
+  "https://drive.google.com/file/d/13J2OBXFy-FcGia9wkcJzafZ6o-lvnWzb/view?usp=sharing";
 
 const WhyThisBookSection = () => {
   const [openPreview, setOpenPreview] = useState(false);
